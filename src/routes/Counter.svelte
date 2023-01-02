@@ -3,7 +3,7 @@
 
 	let count = 0;
 
-	const displayed_count = spring();
+	const displayed_count = spring(count, {stiffness: 0.1});
 	$: displayed_count.set(count);
 	$: offset = modulo($displayed_count, 1);
 
